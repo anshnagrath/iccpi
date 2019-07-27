@@ -1,0 +1,38 @@
+<div>
+<div>
+<br>
+<div class="custom-selector">
+
+  <mat-label  >Records per page</mat-label>
+  <mat-select [(value)]="usersInfo" (selectionChange)="onSelectChange($event.value)">
+  <mat-option [value]=10>
+      10
+    </mat-option>
+    <mat-option [value]=20>
+      20
+    </mat-option>
+    <mat-option [value]=30>
+      30
+    </mat-option>
+    <mat-option [value]=40>
+      40
+    </mat-option>
+  </mat-select>
+
+</div>
+<br><br><br>
+<div>
+  <mat-card class="productItem" *ngFor="let product of allProducts;">
+    <div>
+    <p>Name: {{product.name}}</p>
+    <p>Gender: {{product.gen}}</p>
+    <p>Guardian: {{product.gaurdian}}</p>
+    <p>Guardian Gender:{{product.g_relation}}</p>
+    </div>
+  </mat-card>
+  <mat-paginator [length]="usersInfo"
+          
+          (click)= "getData($event)"   [pageSizeOptions]="[10,20,30,40]" (page)="pageEvent = getData($event)" [showFirstLastButtons]="false">
+</mat-paginator>
+ 
+</div> 

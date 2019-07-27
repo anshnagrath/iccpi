@@ -1,0 +1,37 @@
+.login-main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%; 
+}
+ .full-width {
+     width: 100% !important;
+ } 
+ .passwordIcon{
+    position: relative;
+    float: right;
+    top: 10px;
+ }
+ .my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .md-10{
+      margin-top: 10px;
+  }
+.main{
+    flex-wrap: wrap;
+} 
+.custom-forms{
+    padding: 20px 0px 0px 0px!important;
+}
+ mat-card{
+    min-width: 40%;
+}
+.custom-error{
+    padding: 10px 0px 10px 0px!important;
+}
+.pd-0{
+    padding: 0px !important;
+}

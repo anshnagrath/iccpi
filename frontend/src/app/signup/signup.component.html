@@ -1,0 +1,21 @@
+<div class="login-main" >
+  <mat-card>
+    <form   [formGroup]="loginForm" #formDirective="ngForm" >
+    <mat-card-header >
+      <mat-card-title > Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="main">
+      <mat-form-field class="full-width" layout="row" autocomplete="off" >
+        <input formControlName="username" [(ngModel)]="username" matInput placeholder="username" required>
+      <mat-error class="error-message custom-error" *ngIf="loginForm.get('username').hasError('required')">Please insert a username</mat-error>
+            <mat-error class="error-message custom-error" *ngIf="loginForm.get('username').hasError('pattern')">user name can not include numbers</mat-error>
+      
+      </mat-form-field>
+     
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button [disabled]="loginForm.invalid" (click)="login(formDirective)"   mat-raised-button color="primary">Login</button>
+    </mat-card-actions>
+  </form>
+  </mat-card>
+</div>
